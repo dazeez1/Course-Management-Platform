@@ -87,19 +87,65 @@ const createSampleData = async () => {
           firstName: "John",
           lastName: "Smith",
           emailAddress: "john.smith@institution.com",
-          passwordHash: "facilitator123",
+          passwordHash: "facilitator123", // Will be hashed by model hook
           userRole: "facilitator",
         },
         {
           firstName: "Sarah",
           lastName: "Johnson",
           emailAddress: "sarah.johnson@institution.com",
-          passwordHash: "facilitator123",
+          passwordHash: "facilitator123", // Will be hashed by model hook
           userRole: "facilitator",
         },
       ],
       { ignoreDuplicates: true }
     );
+
+    // Create sample activity logs
+    const facilitators = await models.User.findAll({
+      where: { userRole: "facilitator" },
+    });
+    const allocations = await models.CourseAllocation.findAll();
+
+    if (facilitators.length > 0 && allocations.length > 0) {
+      await models.ActivityTracker.bulkCreate(
+        [
+          {
+            allocationId: allocations[0].id,
+            facilitatorId: facilitators[0].id,
+            weekNumber: 1,
+            academicYear: "2024-2025",
+            attendanceStatus: [true, true, true, true, true],
+            formativeOneGrading: "Done",
+            formativeTwoGrading: "Pending",
+            summativeGrading: "Not Started",
+            courseModeration: "Done",
+            intranetSync: "Done",
+            gradeBookStatus: "Pending",
+            additionalNotes: "Week 1 completed successfully",
+            submittedAt: new Date(),
+            lastUpdatedAt: new Date(),
+          },
+          {
+            allocationId: allocations[0].id,
+            facilitatorId: facilitators[0].id,
+            weekNumber: 2,
+            academicYear: "2024-2025",
+            attendanceStatus: [true, true, true, true, false],
+            formativeOneGrading: "Done",
+            formativeTwoGrading: "Done",
+            summativeGrading: "Pending",
+            courseModeration: "Done",
+            intranetSync: "Done",
+            gradeBookStatus: "Done",
+            additionalNotes: "One student absent on Friday",
+            submittedAt: new Date(),
+            lastUpdatedAt: new Date(),
+          },
+        ],
+        { ignoreDuplicates: true }
+      );
+    }
 
     console.log("✅ Sample data created successfully");
   } catch (error) {
