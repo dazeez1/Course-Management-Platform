@@ -35,7 +35,7 @@ This platform consists of three main modules:
 - **Testing**: Jest for unit testing
 - **Documentation**: Swagger API documentation
 
-## 📋 Prerequisites
+## Prerequisites
 
 - Node.js (v14 or higher)
 - MySQL (v8.0 or higher)
