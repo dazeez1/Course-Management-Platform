@@ -18,12 +18,13 @@ This platform consists of three main modules:
 - **Features**: Activity logs, Redis notifications, background workers
 - **Actors**: Facilitators (manage own logs), Managers (monitor all)
 
-### Module 3: Student Reflection Page with i18n/l10n
+### Module 3: Course Reflection Page with i18n/l10n
 
-- **Purpose**: Multilingual student feedback collection
+- **Purpose**: Multilingual course feedback collection
 - **Features**: Dynamic language switching, responsive design
 - **Location**: `student-reflection-page/` directory
 - **Hosting**: Designed for GitHub Pages deployment
+- **Live Demo**: [https://course-management-platform-dusky.vercel.app/](https://course-management-platform-dusky.vercel.app/)
 
 ## Technology Stack
 
