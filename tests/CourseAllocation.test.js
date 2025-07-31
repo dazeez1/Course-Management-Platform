@@ -2,19 +2,16 @@ const { CourseAllocation, User, Course, Cohort } = require("../src/models");
 
 describe("CourseAllocation Model", () => {
   beforeAll(async () => {
-    // Setup test database connection
     const { sequelize } = require("../src/config/database");
     await sequelize.sync({ force: true });
   });
 
   afterAll(async () => {
-    // Close database connection
     const { sequelize } = require("../src/config/database");
     await sequelize.close();
   });
 
   beforeEach(async () => {
-    // Clear tables before each test
     await CourseAllocation.destroy({ where: {} });
     await User.destroy({ where: {} });
     await Course.destroy({ where: {} });
@@ -23,7 +20,6 @@ describe("CourseAllocation Model", () => {
 
   describe("CourseAllocation Creation", () => {
     test("should create a course allocation with valid data", async () => {
-      // Create required related records
       const facilitator = await User.create({
         firstName: "John",
         lastName: "Doe",

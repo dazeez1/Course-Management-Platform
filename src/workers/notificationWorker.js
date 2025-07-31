@@ -113,13 +113,11 @@ Course Management System`,
         timestamp: new Date().toISOString(),
       };
 
-      // In a real implementation, you would send this via email/SMS
       console.log(
         `📧 Reminder sent to ${facilitator.emailAddress}:`,
         message.subject
       );
 
-      // Log the reminder for audit purposes
       await this.logNotification("reminder", message);
     } catch (error) {
       console.error("Error sending facilitator reminder:", error);
@@ -197,13 +195,11 @@ Course Management System`,
         timestamp: new Date().toISOString(),
       };
 
-      // In a real implementation, you would send this via email/SMS
       console.log(
         `🚨 Alert sent to ${managers.length} managers:`,
         message.subject
       );
 
-      // Log the alert for audit purposes
       await this.logNotification("alert", message);
     } catch (error) {
       console.error("Error sending manager alert:", error);
@@ -260,7 +256,6 @@ Course Management System`,
             });
 
             if (!existingLog) {
-              // Queue reminder
               const reminder = {
                 facilitatorId: facilitator.id,
                 allocationId: allocation.id,
@@ -295,7 +290,6 @@ Course Management System`,
   // Log notification for audit purposes
   async logNotification(type, message) {
     try {
-      // In a real implementation, you might want to store this in a database
       console.log(
         `📝 Notification logged - Type: ${type}, Recipients: ${
           message.recipients ? message.recipients.length : 1

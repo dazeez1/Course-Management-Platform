@@ -9,13 +9,11 @@ describe("User Model", () => {
   });
 
   afterAll(async () => {
-    // Close database connection
     const { sequelize } = require("../src/config/database");
     await sequelize.close();
   });
 
   beforeEach(async () => {
-    // Clear users table before each test
     await User.destroy({ where: {} });
   });
 

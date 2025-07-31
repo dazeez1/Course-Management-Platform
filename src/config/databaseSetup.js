@@ -17,7 +17,7 @@ const initializeDatabase = async () => {
         firstName: "System",
         lastName: "Administrator",
         emailAddress: "admin@institution.com",
-        passwordHash: "admin123", // Will be hashed by the model hook
+        passwordHash: "admin123",
         userRole: "manager",
         isActive: true,
       });
@@ -87,14 +87,14 @@ const createSampleData = async () => {
           firstName: "John",
           lastName: "Smith",
           emailAddress: "john.smith@institution.com",
-          passwordHash: "facilitator123", // Will be hashed by model hook
+          passwordHash: "facilitator123",
           userRole: "facilitator",
         },
         {
           firstName: "Sarah",
           lastName: "Johnson",
           emailAddress: "sarah.johnson@institution.com",
-          passwordHash: "facilitator123", // Will be hashed by model hook
+          passwordHash: "facilitator123",
           userRole: "facilitator",
         },
       ],

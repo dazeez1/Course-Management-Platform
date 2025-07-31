@@ -313,7 +313,7 @@ const getActivityStats = async (req, res) => {
       });
     });
 
-    const totalActivities = stats.length * 6; // 6 status fields per log
+    const totalActivities = stats.length * 6;
     const completionRate =
       totalActivities > 0
         ? ((statusCounts["Done"] / totalActivities) * 100).toFixed(2)

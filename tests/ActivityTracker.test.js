@@ -8,19 +8,16 @@ const {
 
 describe("ActivityTracker Model", () => {
   beforeAll(async () => {
-    // Setup test database connection
     const { sequelize } = require("../src/config/database");
     await sequelize.sync({ force: true });
   });
 
   afterAll(async () => {
-    // Close database connection
     const { sequelize } = require("../src/config/database");
     await sequelize.close();
   });
 
   beforeEach(async () => {
-    // Clear tables before each test
     await ActivityTracker.destroy({ where: {} });
     await CourseAllocation.destroy({ where: {} });
     await User.destroy({ where: {} });
@@ -30,7 +27,6 @@ describe("ActivityTracker Model", () => {
 
   describe("ActivityTracker Creation", () => {
     test("should create an activity log with valid data", async () => {
-      // Create required related records
       const facilitator = await User.create({
         firstName: "John",
         lastName: "Doe",
@@ -150,7 +146,7 @@ describe("ActivityTracker Model", () => {
       const activityData = {
         allocationId: 1,
         facilitatorId: 1,
-        weekNumber: 0, // Invalid week number
+        weekNumber: 0,
         academicYear: "2024",
         attendanceStatus: [true, true, true, true, true],
         formativeOneGrading: "Done",

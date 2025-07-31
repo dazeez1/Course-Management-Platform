@@ -122,9 +122,9 @@ describe("Utility Functions", () => {
 
     test("should reject invalid attendance arrays", () => {
       const invalidArrays = [
-        [true, true, true, true], // Too short
-        [true, true, true, true, true, true], // Too long
-        [true, true, true, true, "true"], // Wrong type
+        [true, true, true, true],
+        [true, true, true, true, true, true],
+        [true, true, true, true, "true"],
         "not-an-array",
         null,
         undefined,
