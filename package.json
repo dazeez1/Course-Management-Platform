@@ -9,8 +9,8 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "db:migrate": "npx sequelize-cli db:migrate",
-    "db:seed": "npx sequelize-cli db:seed:all",
-    "db:reset": "npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all"
+    "db:seed": "echo 'Seeders not used - database setup handled by databaseSetup.js'",
+    "db:reset": "npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate && npm start"
   },
   "keywords": [
     "course-management",

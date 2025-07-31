@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Course Reflection Page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container fade-in">
+      <div class="language-selector">
+        <span
+          class="language-label"
+          data-en="Language:"
+          data-fr="Langue:"
+          data-yo="Èdè:"
+          >Language:</span
+        >
+        <select class="language-dropdown" id="languageSelect">
+          <option value="en">English</option>
+          <option value="fr">Français</option>
+          <option value="yo">Yorùbá</option>
+        </select>
+      </div>
+
+      <div class="header">
+        <h1
+          class="title"
+          data-en="Course Reflection"
+          data-fr="Réflexion du Cours"
+          data-yo="Ìròyìn Kọ́ọ̀sì"
+        >
+          Course Reflection
+        </h1>
+        <p
+          class="greeting"
+          data-en="Welcome! Please take a moment to reflect on your learning journey and share your thoughts about the course."
+          data-fr="Bienvenue ! Prenez un moment pour réfléchir à votre parcours d'apprentissage et partagez vos réflexions sur le cours."
+          data-yo="Káàbọ̀! Jọ̀ọ́ kí a fẹ́ẹ́rẹ́ ṣàlàyé nípa ìrìn-àjò ẹ̀kọ́ rẹ̀ àti kí o pín ìròyìn rẹ̀ nípa kọ́ọ̀sì náà."
+        >
+          Welcome! Please take a moment to reflect on your learning journey and
+          share your thoughts about the course.
+        </p>
+      </div>
+
+      <form class="reflection-form" id="reflectionForm">
+        <div class="question-section">
+          <h3
+            class="question-title"
+            data-en="Question 1"
+            data-fr="Question 1"
+            data-yo="Ìbéèrè 1"
+          >
+            Question 1
+          </h3>
+          <p
+            class="question-text"
+            data-en="What did you enjoy most about the course? What aspects of the learning experience were most valuable to you?"
+            data-fr="Qu'avez-vous le plus apprécié dans ce cours ? Quels aspects de l'expérience d'apprentissage vous ont été les plus précieux ?"
+            data-yo="Kí ni o gbàdùn jù lọ nínú kọ́ọ̀sì náà? Àwọn ìpín wo nínú ìrírí ẹ̀kọ́ náà ni o ṣe pàtàkì jù fún ọ?"
+            data-en-placeholder="Share your thoughts here..."
+            data-fr-placeholder="Partagez vos réflexions ici..."
+            data-yo-placeholder="Pín ìròyìn rẹ̀ níbí..."
+          >
+            What did you enjoy most about the course? What aspects of the
+            learning experience were most valuable to you?
+          </p>
+          <textarea
+            placeholder="Share your thoughts here..."
+            data-en-placeholder="Share your thoughts here..."
+            data-fr-placeholder="Partagez vos réflexions ici..."
+            data-yo-placeholder="Pín ìròyìn rẹ̀ níbí..."
+          ></textarea>
+        </div>
+
+        <div class="question-section">
+          <h3
+            class="question-title"
+            data-en="Question 2"
+            data-fr="Question 2"
+            data-yo="Ìbéèrè 2"
+          >
+            Question 2
+          </h3>
+          <p
+            class="question-text"
+            data-en="What was the most challenging part of the course? How did you overcome these challenges?"
+            data-fr="Quelle a été la partie la plus difficile du cours ? Comment avez-vous surmonté ces défis ?"
+            data-yo="Kí ni ìpín tí ó ṣòro jù nínú kọ́ọ̀sì náà? Báwo ni o ṣe ṣàlàyé àwọn ìṣòro yìí?"
+            data-en-placeholder="Share your thoughts here..."
+            data-fr-placeholder="Partagez vos réflexions ici..."
+            data-yo-placeholder="Pín ìròyìn rẹ̀ níbí..."
+          >
+            What was the most challenging part of the course? How did you
+            overcome these challenges?
+          </p>
+          <textarea
+            placeholder="Share your thoughts here..."
+            data-en-placeholder="Share your thoughts here..."
+            data-fr-placeholder="Partagez vos réflexions ici..."
+            data-yo-placeholder="Pín ìròyìn rẹ̀ níbí..."
+          ></textarea>
+        </div>
+
+        <div class="question-section">
+          <h3
+            class="question-title"
+            data-en="Question 3"
+            data-fr="Question 3"
+            data-yo="Ìbéèrè 3"
+          >
+            Question 3
+          </h3>
+          <p
+            class="question-text"
+            data-en="What could be improved in the course? What suggestions do you have for future students or instructors?"
+            data-fr="Que pourrait-on améliorer dans le cours ? Quelles suggestions avez-vous pour les futurs étudiants ou instructeurs ?"
+            data-yo="Kí ni a lè ṣe láti mú kọ́ọ̀sì náà dára si? Kí ni ìdámọ̀ rẹ̀ fún àwọn ọmọ ilé-ẹ̀kọ́ tàbí àwọn olùkọ́ tí yóò wà ní ọjọ́ iwájú?"
+            data-en-placeholder="Share your thoughts here..."
+            data-fr-placeholder="Partagez vos réflexions ici..."
+            data-yo-placeholder="Pín ìròyìn rẹ̀ níbí..."
+          >
+            What could be improved in the course? What suggestions do you have
+            for future students or instructors?
+          </p>
+          <textarea
+            placeholder="Share your thoughts here..."
+            data-en-placeholder="Share your thoughts here..."
+            data-fr-placeholder="Partagez vos réflexions ici..."
+            data-yo-placeholder="Pín ìròyìn rẹ̀ níbí..."
+          ></textarea>
+        </div>
+
+        <button
+          type="submit"
+          class="submit-btn"
+          data-en="Submit Reflection"
+          data-fr="Soumettre la Réflexion"
+          data-yo="Firanṣẹ́ Ìròyìn"
+        >
+          Submit Reflection
+        </button>
+      </form>
+    </div>
+
+    <!-- Success Notification Modal -->
+    <div class="success-overlay" id="successOverlay">
+      <div class="success-modal">
+        <div class="success-icon">✓</div>
+        <h2
+          class="success-title"
+          data-en="Thank You!"
+          data-fr="Merci !"
+          data-yo="O ṣeun!"
+        >
+          Thank You!
+        </h2>
+        <p
+          class="success-message"
+          data-en="Your reflection has been submitted successfully. Your feedback is valuable to us and will help improve the course for future students."
+          data-fr="Votre réflexion a été soumise avec succès. Vos commentaires nous sont précieux et aideront à améliorer le cours pour les futurs étudiants."
+          data-yo="Ìròyìn rẹ̀ ti firanṣẹ́ nígbàgbọ́. Ìdáhùn rẹ̀ ṣe pàtàkì fún wa àti yóò ṣe iranlọwọ́ láti mú kọ́ọ̀sì náà dára si fún àwọn ọmọ ilé-ẹ̀kọ́ tí yóò wà ní ọjọ́ iwájú."
+        >
+          Your reflection has been submitted successfully. Your feedback is
+          valuable to us and will help improve the course for future students.
+        </p>
+        <button
+          class="success-btn"
+          onclick="closeSuccessModal()"
+          data-en="Close"
+          data-fr="Fermer"
+          data-yo="Tí"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+
+    <script src="Script.js"></script>
+  </body>
+</html>
