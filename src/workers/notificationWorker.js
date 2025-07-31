@@ -41,9 +41,9 @@ class NotificationWorker {
     while (this.isRunning) {
       try {
         // Check for pending reminders
-        const reminder = await redisClient.brpop(this.reminderQueue, 5);
+        const reminder = await redisClient.brPop(this.reminderQueue, 5);
 
-        if (reminder) {
+        if (reminder && reminder.length > 0) {
           const reminderData = JSON.parse(reminder[1]);
           await this.sendFacilitatorReminder(reminderData);
         }
@@ -59,9 +59,9 @@ class NotificationWorker {
     while (this.isRunning) {
       try {
         // Check for pending alerts
-        const alert = await redisClient.brpop(this.alertQueue, 5);
+        const alert = await redisClient.brPop(this.alertQueue, 5);
 
-        if (alert) {
+        if (alert && alert.length > 0) {
           const alertData = JSON.parse(alert[1]);
           await this.sendManagerAlert(alertData);
         }

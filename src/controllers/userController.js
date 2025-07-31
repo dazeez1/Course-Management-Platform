@@ -114,7 +114,7 @@ const updateUserProfile = async (request, response) => {
     }
 
     const { firstName, lastName, emailAddress } = request.body;
-    const userId = request.user.userId;
+    const userId = request.currentUser.id;
 
     const user = await User.findByPk(userId);
     if (!user) {
@@ -179,7 +179,7 @@ const changeUserPassword = async (request, response) => {
     }
 
     const { currentPassword, newPassword } = request.body;
-    const userId = request.user.userId;
+    const userId = request.currentUser.id;
 
     const user = await User.findByPk(userId);
     if (!user) {
@@ -216,7 +216,7 @@ const changeUserPassword = async (request, response) => {
 const deactivateUser = async (request, response) => {
   try {
     const { userId } = request.params;
-    const currentUserId = request.user.userId;
+    const currentUserId = request.currentUser.id;
 
     if (parseInt(userId) === currentUserId) {
       return response.status(400).json({
