@@ -25,7 +25,7 @@ This platform consists of three main modules:
 - **Location**: `student-reflection-page/` directory
 - **Hosting**: Designed for GitHub Pages deployment
 - **Live Demo**: [https://course-management-platform-dusky.vercel.app/](https://course-management-platform-dusky.vercel.app/)
-- **Demo Video**: [Video Postman](https://drive.google.com/file/d/1RxZ-q47EUljtD4N_qU0Dj1bTlSR5XoRI/view?usp=sharing)
+- **Demo Video**: [Video Postman](https://drive.google.com/drive/folders/1Ycxr9_mB1dTd2i3-ti7cmQJVtF98dmVn?usp=sharing)
 
 ## Technology Stack
 
